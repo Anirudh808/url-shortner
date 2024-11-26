@@ -8,7 +8,9 @@ export function Redirect() {
   useEffect(() => {
     async function redirectTo() {
       try {
-        const response = await axios.get(`http://127.0.0.1:8787/${id}`);
+        const response = await axios.get(
+          `https://url-shortner-backend.anirudhmounasamy.workers.dev/${id}`
+        );
         console.log(response);
         const longUrl = response.data; // assuming the long URL is in the 'longUrl' field
         if (longUrl) {

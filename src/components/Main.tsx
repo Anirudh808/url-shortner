@@ -8,11 +8,16 @@ export function Main() {
   const [copied, setCopied] = useState(false);
 
   async function handleOnclick() {
-    const data = await axios.post("http://127.0.0.1:8787/shorten", {
-      url,
-    });
+    const data = await axios.post(
+      "https://url-shortner-backend.anirudhmounasamy.workers.dev/shorten",
+      {
+        url,
+      }
+    );
     console.log(data);
-    setShortUrl(`http://localhost:5173/${data.data.shortUrl}`);
+    setShortUrl(
+      `https://url-shortner-app-chi.vercel.app/${data.data.shortUrl}`
+    );
   }
 
   const handleCopy = () => {
