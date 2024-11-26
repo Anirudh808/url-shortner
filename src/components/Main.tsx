@@ -8,9 +8,10 @@ export function Main() {
   const [copied, setCopied] = useState(false);
 
   async function handleOnclick() {
-    const data = await axios.post("http://localhost:3000/shorten", {
+    const data = await axios.post("http://127.0.0.1:8787/shorten", {
       url,
     });
+    console.log(data);
     setShortUrl(`http://localhost:5173/${data.data.shortUrl}`);
   }
 
