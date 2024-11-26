@@ -16,7 +16,7 @@ export function Main() {
     );
     console.log(data);
     setShortUrl(
-      `https://url-shortner-app-chi.vercel.app/${data.data.shortUrl}`
+      'https://shorturl-pi.vercel.app//${data.data.shortUrl}`
     );
   }
 
